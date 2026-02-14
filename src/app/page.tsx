@@ -78,7 +78,7 @@ export default function Home() {
           <ul className="space-y-2 text-left list-none">
             <li>👎 Migrated react-app to Bun and won&apos;t shut up about it</li>
             <li>👎 Staging + feature branches on Vercel, but prod is still on the old setup. Classic Dylan.</li>
-            <li>👎 Suggested &ldquo;devbox + agent e2e testing&rdquo; after seeing one tweet</li>
+            <li>👎 Asked someone to test his AI agent. Begged them to stop when it started snitching on him.</li>
             <li>👎 Believes the Lord of the Rings trilogy is the greatest cinematic achievement of all time and will fight you on it</li>
             <li>👎 Built an Oracle AI agent and now it&apos;s his entire personality</li>
             <li>👎 Deploys to prod on Fridays and calls it &ldquo;moving fast&rdquo;</li>
