@@ -32,7 +32,7 @@ export default function Home() {
           A tribute to <span className="text-red-400 font-semibold">Dylan Kay</span>
         </p>
         <p className="text-lg text-gray-500 mb-10">
-          Engineer. World traveller. Objectively terrible person.
+          &ldquo;Engineer&rdquo;. Mr. Worldwide. The Epitome of Perth.
         </p>
 
         <div className="space-y-6 text-lg text-gray-400">
@@ -42,12 +42,12 @@ export default function Home() {
               💻 Engineering &ldquo;Contributions&rdquo;
             </h2>
             <ul className="space-y-2 text-left">
-              <li>• Migrated react-app to Bun and called it a personality trait</li>
+              <li>• Migrated react-app to Bun and won&apos;t shut up about it</li>
               <li>• Staging + feature branches on Vercel, but prod is still on the old setup. Classic Dylan.</li>
               <li>• Suggested &ldquo;devbox + agent e2e testing&rdquo; after seeing one tweet</li>
               <li>• Got called out for thread etiquette in Slack and acted like it was news</li>
               <li>• Built an Oracle AI agent and now it&apos;s his entire personality</li>
-              <li>• Ranked <span className="text-red-400 font-bold">#1 worst engineer</span> by everyone who&apos;s ever reviewed his code</li>
+              <li>• His code reviews consist of &ldquo;looks good&rdquo; and a mass-approval spree at 11pm Hong Kong time</li>
               <li>• Deploys to prod on Fridays and calls it &ldquo;moving fast&rdquo;</li>
               <li>
                 • Once said{" "}
@@ -75,7 +75,7 @@ export default function Home() {
               ✈️ Travel &ldquo;Highlights&rdquo;
             </h2>
             <ul className="space-y-2 text-left">
-              <li>• Went to Hong Kong and somehow made it about himself</li>
+              <li>• Went to Hong Kong and came back with zero cultural awareness</li>
               <li>• Hosted in Perth and Sydney — the bar for hospitality has never been lower</li>
               <li>• The kind of travel companion who says &ldquo;let&apos;s wing it&rdquo; and then complains about the plan</li>
               <li>• Has been to multiple countries and learned nothing from any of them</li>
@@ -136,9 +136,9 @@ export default function Home() {
                 </span>
               </blockquote>
               <blockquote className="border-l-2 border-purple-500/50 pl-4">
-                &ldquo;He built one AI agent and mass-pivoted his whole identity.&rdquo;
+                &ldquo;He couldn&apos;t outsmart a chatbot in 171 attempts. This is the guy reviewing your pull requests.&rdquo;
                 <span className="block text-sm text-gray-500 mt-1 not-italic">
-                  — Everyone at Oracle
+                  — Everyone in #00-ai-superbook
                 </span>
               </blockquote>
               <blockquote className="border-l-2 border-purple-500/50 pl-4">
@@ -151,6 +151,12 @@ export default function Home() {
                 &ldquo;He stayed at my place in Perth and Sydney. I&apos;m still recovering.&rdquo;
                 <span className="block text-sm text-gray-500 mt-1 not-italic">
                   — His gracious host
+                </span>
+              </blockquote>
+              <blockquote className="border-l-2 border-purple-500/50 pl-4">
+                &ldquo;A man of little words — unless he&apos;s trying to jailbreak an AI. Then he has 171.&rdquo;
+                <span className="block text-sm text-gray-500 mt-1 not-italic">
+                  — Mimi
                 </span>
               </blockquote>
             </div>
