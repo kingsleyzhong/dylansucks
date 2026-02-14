@@ -76,7 +76,9 @@ export default function Home() {
             </h2>
             <ul className="space-y-2 text-left">
               <li>• Went to Hong Kong and came back with zero cultural awareness</li>
-              <li>• Hosted in Perth and Sydney — the bar for hospitality has never been lower</li>
+              <li>• Hosted in Perth — the bar for hospitality has never been lower</li>
+              <li>• Stomps around your house at 2am like he&apos;s training for Riverdance</li>
+              <li>• Leaves every bathroom floor like a slip-and-slide. Towels exist, Dylan.</li>
               <li>• The kind of travel companion who says &ldquo;let&apos;s wing it&rdquo; and then complains about the plan</li>
               <li>• Has been to multiple countries and learned nothing from any of them</li>
               <li>• Receding hairline accelerating faster than his career</li>
