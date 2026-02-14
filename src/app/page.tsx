@@ -46,6 +46,8 @@ export default function Home() {
               <li>• Staging + feature branches on Vercel, but prod is still on the old setup. Classic Dylan.</li>
               <li>• Suggested &ldquo;devbox + agent e2e testing&rdquo; after seeing one tweet</li>
               <li>• Got called out for thread etiquette in Slack and acted like it was news</li>
+              <li>• Built an Oracle AI agent and now it&apos;s his entire personality</li>
+              <li>• Ranked <span className="text-red-400 font-bold">#1 worst engineer</span> by everyone who&apos;s ever reviewed his code</li>
               <li>• Deploys to prod on Fridays and calls it &ldquo;moving fast&rdquo;</li>
               <li>
                 • Once said{" "}
@@ -55,6 +57,16 @@ export default function Home() {
                 with full confidence
               </li>
             </ul>
+          </div>
+
+          {/* Personal hygiene */}
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-red-500/30">
+            <h2 className="text-xl font-bold text-red-500 mb-3">
+              🚨 Public Health Warning
+            </h2>
+            <p className="text-left text-lg">
+              Dylan <span className="font-bold text-red-400">does not wash his hands</span> after using the bathroom. This is not a rumour. This is a verified, eyewitness-confirmed fact. If Dylan has ever handed you food, our thoughts are with you.
+            </p>
           </div>
 
           {/* Travel roasts */}
@@ -67,6 +79,7 @@ export default function Home() {
               <li>• Hosted in Perth and Sydney — the bar for hospitality has never been lower</li>
               <li>• The kind of travel companion who says &ldquo;let&apos;s wing it&rdquo; and then complains about the plan</li>
               <li>• Has been to multiple countries and learned nothing from any of them</li>
+              <li>• Receding hairline accelerating faster than his career</li>
             </ul>
           </div>
 
@@ -101,7 +114,7 @@ export default function Home() {
               </div>
               <div>
                 <div className="text-3xl font-black text-orange-400">0</div>
-                <div className="text-xs text-gray-500">redeeming qualities</div>
+                <div className="text-xs text-gray-500">times he washed his hands</div>
               </div>
               <div>
                 <div className="text-3xl font-black text-yellow-400">∞</div>
@@ -120,6 +133,12 @@ export default function Home() {
                 &ldquo;I bought this domain specifically to let the world know.&rdquo;
                 <span className="block text-sm text-gray-500 mt-1 not-italic">
                   — A concerned friend
+                </span>
+              </blockquote>
+              <blockquote className="border-l-2 border-purple-500/50 pl-4">
+                &ldquo;He built one AI agent and mass-pivoted his whole identity.&rdquo;
+                <span className="block text-sm text-gray-500 mt-1 not-italic">
+                  — Everyone at Oracle
                 </span>
               </blockquote>
               <blockquote className="border-l-2 border-purple-500/50 pl-4">
