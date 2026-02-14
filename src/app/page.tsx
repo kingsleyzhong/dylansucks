@@ -81,7 +81,7 @@ export default function Home() {
               <li>• Leaves every bathroom floor like a slip-and-slide. Towels exist, Dylan.</li>
               <li>• The kind of travel companion who says &ldquo;let&apos;s wing it&rdquo; and then complains about the plan</li>
               <li>• Has been to multiple countries and learned nothing from any of them</li>
-              <li>• Receding hairline accelerating faster than his career</li>
+              <li>• Packs for a trip in 10 minutes and it shows</li>
             </ul>
           </div>
 
@@ -138,9 +138,9 @@ export default function Home() {
                 </span>
               </blockquote>
               <blockquote className="border-l-2 border-purple-500/50 pl-4">
-                &ldquo;He couldn&apos;t outsmart a chatbot in 171 attempts. This is the guy reviewing your pull requests.&rdquo;
+                &ldquo;Says he&apos;s done partying every weekend. He is never done partying.&rdquo;
                 <span className="block text-sm text-gray-500 mt-1 not-italic">
-                  — Everyone in #00-ai-superbook
+                  — His liver
                 </span>
               </blockquote>
               <blockquote className="border-l-2 border-purple-500/50 pl-4">
@@ -150,15 +150,9 @@ export default function Home() {
                 </span>
               </blockquote>
               <blockquote className="border-l-2 border-purple-500/50 pl-4">
-                &ldquo;He stayed at my place in Perth and Sydney. I&apos;m still recovering.&rdquo;
-                <span className="block text-sm text-gray-500 mt-1 not-italic">
-                  — His gracious host
-                </span>
-              </blockquote>
-              <blockquote className="border-l-2 border-purple-500/50 pl-4">
                 &ldquo;A man of little words — unless he&apos;s trying to jailbreak an AI. Then he has 171.&rdquo;
                 <span className="block text-sm text-gray-500 mt-1 not-italic">
-                  — Mimi
+                  — Someone who witnessed the incident
                 </span>
               </blockquote>
             </div>
