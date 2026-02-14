@@ -90,10 +90,10 @@ export default function Home() {
             </h2>
             <div className="flex items-center justify-center gap-2 text-4xl">
               <span>⭐</span>
-              <span className="text-gray-700">⭐</span>
-              <span className="text-gray-700">⭐</span>
-              <span className="text-gray-700">⭐</span>
-              <span className="text-gray-700">⭐</span>
+              <span className="opacity-20">⭐</span>
+              <span className="opacity-20">⭐</span>
+              <span className="opacity-20">⭐</span>
+              <span className="opacity-20">⭐</span>
             </div>
             <p className="text-sm text-gray-500 mt-2">
               1/5 — would not recommend as a friend, coworker, or human
