@@ -1,16 +1,169 @@
 @import "tailwindcss";
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 0.6;
-  }
-  50% {
-    transform: translateY(-30px) rotate(15deg);
+* {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+}
+
+body {
+  background-color: #000080;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='35' font-size='20'%3E💩%3C/text%3E%3C/svg%3E");
+  background-size: 80px 80px;
+  cursor: none;
+}
+
+/* Custom cursor */
+#custom-cursor {
+  position: fixed;
+  font-size: 32px;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+}
+
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99998;
+  font-size: 16px;
+  animation: sparkle-fade 0.8s ease-out forwards;
+}
+
+@keyframes sparkle-fade {
+  0% {
     opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) translateY(20px);
   }
 }
 
-.animate-float {
-  animation: float 4s ease-in-out infinite;
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes rainbow {
+  0% { color: red; }
+  14% { color: orange; }
+  28% { color: yellow; }
+  42% { color: green; }
+  57% { color: cyan; }
+  71% { color: blue; }
+  85% { color: purple; }
+  100% { color: red; }
+}
+
+.rainbow-text {
+  animation: rainbow 2s linear infinite;
+}
+
+@keyframes fire-flicker {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.1) scaleX(0.95); }
+}
+
+.fire {
+  display: inline-block;
+  animation: fire-flicker 0.3s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee {
+  animation: marquee 10s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes construction-flash {
+  0%, 49% { background-color: #ffff00; color: #000; }
+  50%, 100% { background-color: #000; color: #ffff00; }
+}
+
+.construction-banner {
+  animation: construction-flash 1s step-end infinite;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  border: 3px dashed #ffff00;
+}
+
+hr.rainbow-hr {
+  border: none;
+  height: 4px;
+  background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, purple);
+}
+
+.geocities-card {
+  background-color: #c0c0c0;
+  border: 3px outset #fff;
+  padding: 16px;
+  margin: 16px 0;
+  color: #000;
+}
+
+.geocities-card h2 {
+  color: #ff0000;
+  text-shadow: 2px 2px #000;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.hit-counter {
+  background: #000;
+  color: #0f0;
+  font-family: 'Courier New', monospace !important;
+  padding: 4px 12px;
+  border: 2px inset #333;
+  display: inline-block;
+  font-size: 20px;
+  letter-spacing: 4px;
+}
+
+a.guestbook {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+a.guestbook:hover {
+  color: #ff00ff;
+}
+
+.wordart {
+  font-size: 72px;
+  font-weight: 900;
+  background: linear-gradient(180deg, #ff0000, #ff6600, #ffff00, #ff6600, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(3px 3px 0px #000);
+  letter-spacing: 4px;
+}
+
+@media (min-width: 768px) {
+  .wordart {
+    font-size: 96px;
+  }
+}
+
+.ie-disclaimer {
+  font-size: 11px;
+  color: #808080;
+}
+
+.webring {
+  border: 2px solid #808080;
+  padding: 8px;
+  text-align: center;
+  background: #000080;
+  color: #fff;
 }

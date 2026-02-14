@@ -1,171 +1,202 @@
+"use client";
+
+import { useEffect } from "react";
+
 export default function Home() {
+  useEffect(() => {
+    const cursor = document.getElementById("custom-cursor");
+    const handleMouseMove = (e: MouseEvent) => {
+      if (cursor) {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      }
+      // Sparkle trail
+      const sparkle = document.createElement("span");
+      sparkle.className = "sparkle";
+      sparkle.textContent = ["✨", "⭐", "💫", "🌟"][Math.floor(Math.random() * 4)];
+      sparkle.style.left = e.clientX + (Math.random() * 20 - 10) + "px";
+      sparkle.style.top = e.clientY + (Math.random() * 20 - 10) + "px";
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 800);
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
-    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-900/20 via-black to-black" />
+    <>
+      <div id="custom-cursor">💩</div>
 
-      {/* Floating emojis */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <span
-            key={i}
-            className="absolute text-4xl animate-float"
-            style={{
-              left: `${(i * 5 + 3) % 100}%`,
-              top: `${(i * 7 + 2) % 100}%`,
-              animationDelay: `${(i * 0.7) % 5}s`,
-              animationDuration: `${3 + (i % 4)}s`,
-            }}
-          >
-            {["💩", "👎", "🤡", "😤", "🚮"][i % 5]}
-          </span>
-        ))}
-      </div>
+      <main className="min-h-screen text-white p-4 max-w-3xl mx-auto">
+        {/* Under Construction Banner */}
+        <div className="construction-banner">
+          🚧 ⚠️ UNDER CONSTRUCTION ⚠️ 🚧 THIS SITE IS A WORK IN PROGRESS — MORE DYLAN CRIMES BEING DOCUMENTED DAILY
+        </div>
 
-      {/* Main content */}
-      <div className="relative z-10 text-center px-4 max-w-3xl mx-auto py-16">
-        <h1 className="text-7xl md:text-9xl font-black mb-6 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 bg-clip-text text-transparent animate-pulse">
-          DYLAN SUCKS
-        </h1>
-
-        <p className="text-xl md:text-2xl text-gray-400 mb-2 font-light">
-          A tribute to <span className="text-red-400 font-semibold">Dylan Kay</span>
-        </p>
-        <p className="text-lg text-gray-500 mb-10">
-          &ldquo;Engineer&rdquo;. Mr. Worldwide. The Epitome of Perth.
-        </p>
-
-        <div className="space-y-6 text-lg text-gray-400">
-          {/* Engineering roasts */}
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-            <h2 className="text-xl font-bold text-red-400 mb-3">
-              💻 Engineering &ldquo;Contributions&rdquo;
-            </h2>
-            <ul className="space-y-2 text-left">
-              <li>• Migrated react-app to Bun and won&apos;t shut up about it</li>
-              <li>• Staging + feature branches on Vercel, but prod is still on the old setup. Classic Dylan.</li>
-              <li>• Suggested &ldquo;devbox + agent e2e testing&rdquo; after seeing one tweet</li>
-              <li>• Believes the Lord of the Rings trilogy is the greatest cinematic achievement of all time and will fight you on it</li>
-              <li>• Built an Oracle AI agent and now it&apos;s his entire personality</li>
-              <li>• His code reviews consist of &ldquo;looks good&rdquo; and a mass-approval spree at 11pm Hong Kong time</li>
-              <li>• Deploys to prod on Fridays and calls it &ldquo;moving fast&rdquo;</li>
-              <li>
-                • Once said{" "}
-                <code className="text-orange-400 bg-white/10 px-1 rounded">
-                  it works on my machine
-                </code>{" "}
-                with full confidence
-              </li>
-            </ul>
+        {/* Marquee */}
+        <div className="overflow-hidden bg-black border-2 border-yellow-400 my-4 py-2">
+          <div className="marquee text-yellow-300 text-xl">
+            🚨 BREAKING NEWS: DYLAN STILL SUCKS 🚨 DYLAN STILL SUCKS 🚨 DYLAN STILL SUCKS 🚨 ALERT LEVEL: MAXIMUM 🚨
           </div>
+        </div>
 
-          {/* Personal hygiene */}
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-red-500/30">
-            <h2 className="text-xl font-bold text-red-500 mb-3">
-              🚨 Public Health Warning
-            </h2>
-            <p className="text-left text-lg">
-              Dylan <span className="font-bold text-red-400">does not wash his hands</span> after using the bathroom. This is not a rumour. This is a verified, eyewitness-confirmed fact. If Dylan has ever handed you food, our thoughts are with you.
-            </p>
+        {/* Title */}
+        <div className="text-center my-8">
+          <div>
+            <span className="fire text-5xl">🔥</span>
+            <span className="fire text-5xl">🔥</span>
+            <span className="fire text-5xl">🔥</span>
           </div>
-
-          {/* Travel roasts */}
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-            <h2 className="text-xl font-bold text-blue-400 mb-3">
-              ✈️ Travel &ldquo;Highlights&rdquo;
-            </h2>
-            <ul className="space-y-2 text-left">
-              <li>• Went to Hong Kong and came back with zero cultural awareness</li>
-              <li>• Hosted in Perth — the bar for hospitality has never been lower</li>
-              <li>• Stomps around your house at 2am like he&apos;s training for Riverdance</li>
-              <li>• Leaves every bathroom floor like a slip-and-slide. Towels exist, Dylan.</li>
-              <li>• The kind of travel companion who says &ldquo;let&apos;s wing it&rdquo; and then complains about the plan</li>
-              <li>• Has been to multiple countries and learned nothing from any of them</li>
-              <li>• Packs for a trip in 10 minutes and it shows</li>
-            </ul>
+          <h1 className="wordart my-4">DYLAN SUCKS</h1>
+          <div>
+            <span className="fire text-5xl">🔥</span>
+            <span className="fire text-5xl">🔥</span>
+            <span className="fire text-5xl">🔥</span>
           </div>
+          <p className="text-2xl text-yellow-300 mt-4">
+            A tribute to <span className="text-red-400 font-bold blink">Dylan Kay</span>
+          </p>
+          <p className="text-lg text-cyan-300 mt-2">
+            &ldquo;Engineer&rdquo;. Mr. Worldwide. The Epitome of Perth.
+          </p>
+        </div>
 
-          {/* Rating */}
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-            <h2 className="text-xl font-bold text-yellow-400 mb-3">
-              ⭐ Dylan&apos;s Rating
-            </h2>
-            <div className="flex items-center justify-center gap-2 text-4xl">
-              <span>⭐</span>
-              <span className="opacity-20">⭐</span>
-              <span className="opacity-20">⭐</span>
-              <span className="opacity-20">⭐</span>
-              <span className="opacity-20">⭐</span>
+        <hr className="rainbow-hr" />
+
+        {/* Visitor Counter */}
+        <div className="text-center my-4">
+          <p className="text-yellow-200 text-sm">You are visitor number:</p>
+          <span className="hit-counter">004,827</span>
+          <p className="text-gray-400 text-xs mt-1">(all of them looking for evidence)</p>
+        </div>
+
+        <hr className="rainbow-hr" />
+
+        {/* Engineering */}
+        <div className="geocities-card">
+          <h2>💻 Engineering &ldquo;Contributions&rdquo;</h2>
+          <ul className="space-y-2 text-left list-none">
+            <li>👎 Migrated react-app to Bun and won&apos;t shut up about it</li>
+            <li>👎 Staging + feature branches on Vercel, but prod is still on the old setup. Classic Dylan.</li>
+            <li>👎 Suggested &ldquo;devbox + agent e2e testing&rdquo; after seeing one tweet</li>
+            <li>👎 Believes the Lord of the Rings trilogy is the greatest cinematic achievement of all time and will fight you on it</li>
+            <li>👎 Built an Oracle AI agent and now it&apos;s his entire personality</li>
+            <li>👎 Deploys to prod on Fridays and calls it &ldquo;moving fast&rdquo;</li>
+            <li>👎 Once said{" "}<code style={{ backgroundColor: "#333", color: "#ff6600", padding: "2px 6px" }}>it works on my machine</code>{" "}with full confidence</li>
+          </ul>
+        </div>
+
+        {/* Public Health Warning */}
+        <div className="geocities-card" style={{ borderColor: "red", background: "#ffe0e0" }}>
+          <h2 style={{ color: "#cc0000" }}>🚨 PUBLIC HEALTH WARNING 🚨</h2>
+          <p className="text-left text-lg" style={{ color: "#000" }}>
+            Dylan <span className="font-bold" style={{ color: "red" }}>DOES NOT WASH HIS HANDS</span> after using the bathroom. This is not a rumour. This is a{" "}
+            <span className="blink font-bold" style={{ color: "red" }}>VERIFIED, EYEWITNESS-CONFIRMED</span>{" "}
+            fact. If Dylan has ever handed you food, our thoughts are with you.
+          </p>
+          <p className="text-center mt-4 text-4xl">🤮🤮🤮</p>
+        </div>
+
+        {/* Travel */}
+        <div className="geocities-card">
+          <h2>✈️ Travel &ldquo;Highlights&rdquo;</h2>
+          <ul className="space-y-2 text-left list-none">
+            <li>📍 Went to Hong Kong and came back with zero cultural awareness</li>
+            <li>📍 Hosted in Perth — the bar for hospitality has never been lower</li>
+            <li>📍 Stomps around your house at 2am like he&apos;s training for Riverdance</li>
+            <li>📍 Leaves every bathroom floor like a slip-and-slide. Towels exist, Dylan.</li>
+            <li>📍 The kind of travel companion who says &ldquo;let&apos;s wing it&rdquo; and then complains about the plan</li>
+            <li>📍 Has been to multiple countries and learned nothing from any of them</li>
+            <li>📍 Packs for a trip in 10 minutes and it shows</li>
+          </ul>
+        </div>
+
+        {/* Rating */}
+        <div className="geocities-card text-center">
+          <h2>⭐ Dylan&apos;s Rating</h2>
+          <div className="text-5xl my-4">
+            ⭐<span style={{ opacity: 0.2 }}>⭐⭐⭐⭐</span>
+          </div>
+          <p className="text-lg font-bold" style={{ color: "#000" }}>
+            1/5 — would not recommend as a friend, coworker, or human
+          </p>
+        </div>
+
+        {/* Stats */}
+        <div className="geocities-card text-center">
+          <h2>📊 The Numbers Don&apos;t Lie</h2>
+          <div className="flex justify-around mt-4">
+            <div>
+              <div className="text-4xl font-black rainbow-text">100%</div>
+              <div className="text-xs" style={{ color: "#000" }}>of people surveyed agree</div>
             </div>
-            <p className="text-sm text-gray-500 mt-2">
-              1/5 — would not recommend as a friend, coworker, or human
-            </p>
-          </div>
-
-          {/* Stats */}
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-            <h2 className="text-xl font-bold text-orange-400 mb-3">
-              📊 The Numbers Don&apos;t Lie
-            </h2>
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <div className="text-3xl font-black text-red-400">100%</div>
-                <div className="text-xs text-gray-500">
-                  of people surveyed agree
-                </div>
-              </div>
-              <div>
-                <div className="text-3xl font-black text-orange-400">0</div>
-                <div className="text-xs text-gray-500">times he washed his hands</div>
-              </div>
-              <div>
-                <div className="text-3xl font-black text-yellow-400">∞</div>
-                <div className="text-xs text-gray-500">levels of suckage</div>
-              </div>
+            <div>
+              <div className="text-4xl font-black" style={{ color: "red" }}>0</div>
+              <div className="text-xs" style={{ color: "#000" }}>times he washed his hands</div>
             </div>
-          </div>
-
-          {/* Testimonials */}
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-            <h2 className="text-xl font-bold text-purple-400 mb-3">
-              🗣️ What People Are Saying
-            </h2>
-            <div className="space-y-4 text-left italic text-gray-300">
-              <blockquote className="border-l-2 border-purple-500/50 pl-4">
-                &ldquo;I bought this domain specifically to let the world know.&rdquo;
-                <span className="block text-sm text-gray-500 mt-1 not-italic">
-                  — A concerned friend
-                </span>
-              </blockquote>
-              <blockquote className="border-l-2 border-purple-500/50 pl-4">
-                &ldquo;Says he&apos;s done partying every weekend. He is never done partying.&rdquo;
-                <span className="block text-sm text-gray-500 mt-1 not-italic">
-                  — His liver
-                </span>
-              </blockquote>
-              <blockquote className="border-l-2 border-purple-500/50 pl-4">
-                &ldquo;He migrated us to Bun. Nobody asked for that.&rdquo;
-                <span className="block text-sm text-gray-500 mt-1 not-italic">
-                  — An anonymous coworker
-                </span>
-              </blockquote>
-              <blockquote className="border-l-2 border-purple-500/50 pl-4">
-                &ldquo;A man of little words — unless he&apos;s trying to jailbreak an AI. Then he has 171.&rdquo;
-                <span className="block text-sm text-gray-500 mt-1 not-italic">
-                  — Someone who witnessed the incident
-                </span>
-              </blockquote>
+            <div>
+              <div className="text-4xl font-black" style={{ color: "purple" }}>∞</div>
+              <div className="text-xs" style={{ color: "#000" }}>levels of suckage</div>
             </div>
           </div>
         </div>
 
-        <p className="mt-12 text-sm text-gray-600">
-          Made with 💔 by someone who knows Dylan personally and regrets it
-        </p>
-        <p className="mt-2 text-xs text-gray-700">
-          © 2026 Dylan Sucks Inc. All rights reserved. Dylan still sucks.
-        </p>
-      </div>
-    </main>
+        {/* Testimonials */}
+        <div className="geocities-card">
+          <h2>🗣️ What People Are Saying</h2>
+          <div className="space-y-4 text-left" style={{ color: "#000" }}>
+            <blockquote style={{ borderLeft: "4px solid purple", paddingLeft: "12px", fontStyle: "italic" }}>
+              &ldquo;I bought this domain specifically to let the world know.&rdquo;
+              <br /><span className="text-sm" style={{ color: "#666", fontStyle: "normal" }}>— A concerned friend</span>
+            </blockquote>
+            <blockquote style={{ borderLeft: "4px solid purple", paddingLeft: "12px", fontStyle: "italic" }}>
+              &ldquo;Says he&apos;s done partying every weekend. He is never done partying.&rdquo;
+              <br /><span className="text-sm" style={{ color: "#666", fontStyle: "normal" }}>— His liver</span>
+            </blockquote>
+            <blockquote style={{ borderLeft: "4px solid purple", paddingLeft: "12px", fontStyle: "italic" }}>
+              &ldquo;He migrated us to Bun. Nobody asked for that.&rdquo;
+              <br /><span className="text-sm" style={{ color: "#666", fontStyle: "normal" }}>— An anonymous coworker</span>
+            </blockquote>
+            <blockquote style={{ borderLeft: "4px solid purple", paddingLeft: "12px", fontStyle: "italic" }}>
+              &ldquo;A man of little words — unless he&apos;s trying to jailbreak an AI. Then he has 171.&rdquo;
+              <br /><span className="text-sm" style={{ color: "#666", fontStyle: "normal" }}>— Someone who witnessed the incident</span>
+            </blockquote>
+          </div>
+        </div>
+
+        <hr className="rainbow-hr" />
+
+        {/* Guestbook & Footer */}
+        <div className="text-center my-8 space-y-4">
+          <p>
+            <a href="#" className="guestbook text-xl" onClick={(e) => e.preventDefault()}>
+              📝 Sign My Guestbook! 📝
+            </a>
+          </p>
+
+          <div className="webring">
+            <p className="text-sm">
+              ⬅️ Prev | 🌐 <strong>The Dylan Sucks Webring</strong> | Next ➡️
+            </p>
+          </div>
+
+          <p className="text-sm text-gray-400 mt-8">
+            Made with 💔 by someone who knows Dylan personally and regrets it
+          </p>
+          <p className="text-xs text-gray-500">
+            © 2026 Dylan Sucks Inc. All rights reserved. Dylan still sucks.
+          </p>
+          <p className="text-sm text-yellow-300 mt-2">
+            👷 Webmaster: A concerned friend
+          </p>
+          <p className="ie-disclaimer mt-4">
+            ⚠️ Best viewed in Internet Explorer 6 at 800x600 resolution
+          </p>
+          <p className="text-xs text-gray-600 mt-2">
+            🎵 [MIDI auto-play disabled for your safety] 🎵
+          </p>
+        </div>
+      </main>
+    </>
   );
 }
